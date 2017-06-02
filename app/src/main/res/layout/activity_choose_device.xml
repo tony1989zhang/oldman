@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F5F9"
+
+    >
+
+    <com.firstaid.view.TitleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_view"
+        />
+
+    <LinearLayout android:id="@+id/choose_mode_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_view"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dip"
+        android:layout_marginBottom="20dip"
+        android:layout_marginLeft="30dip"
+        android:layout_marginRight="30dip"
+
+        >
+        <LinearLayout android:id="@+id/mode_intelligent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="6dip"
+            android:background="@mipmap/headset_device_bg"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="插入的是智能设备"
+                android:drawableTop="@mipmap/headset_device_icon"
+                android:drawablePadding="5dip"
+                android:textColor="#fff"
+                />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/mode_headset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="6dip"
+            android:background="@mipmap/headset_bg"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="插入的是耳机"
+                android:drawableTop="@mipmap/headset_icon"
+                android:drawablePadding="5dip"
+                android:textColor="#999"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/choose_mode_root"
+        android:textColor="#B8B8B8"
+        android:text="默认智能探测设备，如8秒钟未选择，则自动识别"
+        android:gravity="center"
+        />
+
+</RelativeLayout>

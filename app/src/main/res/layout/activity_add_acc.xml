@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffdddddd"
+    tools:context="com.firstaid.oldman.AddAccActivity">
+
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/content_add_acc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include"
+        android:layout_marginTop="20dp"
+        android:background="#fff"
+        android:clickable="false"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="#999" />
+
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/accType"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:editable="false"
+                android:gravity="center_vertical"
+                android:paddingBottom="13.0dip"
+                android:paddingTop="14.0dip"
+                android:text="账户类型选择(默认支付宝)"
+                android:textColor="#ff111111"
+                android:textSize="14.0sp" />
+
+            <ImageView
+                android:id="@+id/right_arrow"
+                android:layout_width="35.0dip"
+                android:layout_height="28.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5.0dip"
+                android:layout_marginTop="8.0dip"
+                android:background="@mipmap/mystore_address_rightarrow"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:padding="10.0dip" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#999" />
+
+
+            <EditText
+                android:id="@+id/accNo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="账号"
+                android:imeOptions="actionDone"
+                android:paddingBottom="13.0dip"
+                android:paddingTop="14.0dip"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textCursorDrawable="@null"
+                android:paddingRight="5dp"
+                android:textSize="14.0sp" />
+    <LinearLayout
+        android:id="@+id/linearlayout_blank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:clickable="false"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/accNo_blank"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:hint="银行账号"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="23"
+            android:paddingBottom="13.0dip"
+            android:paddingTop="14.0dip"
+            android:textCursorDrawable="@null"
+            android:paddingRight="5dp"
+            android:textSize="14.0sp" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#999" />
+
+
+            <EditText
+                android:id="@+id/openBank"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:paddingRight="5dp"
+                android:background="@null"
+                android:hint="开户行"
+                android:imeOptions="actionDone"
+                android:paddingBottom="13.0dip"
+                android:paddingTop="14.0dip"
+                android:textCursorDrawable="@null"
+                android:textSize="14.0sp" />
+
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#999" />
+
+
+            <EditText
+                android:id="@+id/accName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:paddingRight="5dp"
+                android:background="@null"
+                android:hint="开户名"
+                android:imeOptions="actionDone"
+                android:paddingBottom="13.0dip"
+                android:paddingTop="14.0dip"
+                android:textCursorDrawable="@null"
+                android:textSize="14.0sp" />
+    </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="#999" />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider_01"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_below="@id/linearlayout"
+        android:layout_marginTop="10.0dip"
+        android:background="#999" />
+
+    <LinearLayout
+        android:id="@+id/usedfrequent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider_01"
+        android:background="#ffffffff"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20.0dip"
+            android:layout_weight="1.0"
+            android:gravity="center_vertical"
+            android:paddingBottom="13.0dip"
+            android:paddingTop="13.0dip"
+            android:text="设为默认提现账户"
+            android:textColor="#ff111111"
+            android:textSize="14.0sp" />
+
+        <CheckBox
+            android:id="@+id/setDefault"
+            android:layout_width="60.0dip"
+            android:layout_height="32.0dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="20.0dip"
+            android:button="@null"
+            android:background="@drawable/btn_oval_orange" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider_02"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_below="@id/usedfrequent"
+        android:background="#999" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/divider_02"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="#3BCF67"
+            android:text="确认"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

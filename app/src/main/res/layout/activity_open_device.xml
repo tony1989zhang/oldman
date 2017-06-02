@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.firstaid.view.TitleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_view"
+        />
+    <EditText android:id="@+id/edit_phone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="请输入设备码"
+        android:inputType="number"
+        android:background="#fff"
+        android:padding="5dip"
+        android:paddingTop="15dip"
+        android:paddingBottom="15dip"
+        android:layout_marginTop="15dip"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="输入设备码开通后设备开始使用"
+        android:layout_marginTop="5dip"
+        />
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="#3BCF67"
+        android:text="确认开通"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+
+
+</LinearLayout>

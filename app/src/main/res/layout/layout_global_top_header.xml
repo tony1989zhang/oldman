@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dip"
+    android:background="@color/title_bg_color"
+   >
+
+    <LinearLayout
+        android:id="@+id/LAYOUT_TOP_BACK"
+        android:layout_width="wrap_content"
+        android:layout_height="50dip"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/TOP_BACK_BUTTON"
+            android:layout_width="36.0dip"
+            android:layout_height="36.0dip"
+            android:layout_marginLeft="5.0dip"
+            android:background="#00000000"
+            android:drawableLeft="@mipmap/zuo"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textColor="#ff0000"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/TOP_LEFT_IMAGEVIEW"
+            android:layout_width="36.0dip"
+            android:layout_height="36.0dip"
+            android:layout_marginLeft="5.0dip"
+            android:adjustViewBounds="true"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_back"
+            android:visibility="gone" />
+
+        <!--<View-->
+            <!--android:layout_width="1.0dip"-->
+            <!--android:layout_height="25.0dip"-->
+            <!--android:background="#000" />-->
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/TITLE_TEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:maxLength="15"
+        android:textColor="#fff"
+        android:textSize="18dp" />
+
+    <ProgressBar
+        android:id="@+id/TOP_PROGRESS_BAR"
+        style="@style/smallCustomProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/TITLE_TEXT"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/TOP_RIGHT_IMAGEBUTTON"
+        android:layout_width="wrap_content"
+        android:layout_height="36.0dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dip"
+        android:background="#00000000"
+        android:contentDescription="@null"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:maxWidth="100.0dip"
+        android:minWidth="52.0dip"
+        android:scaleType="centerInside"
+        android:textColor="#fff"
+        android:textSize="14.0dp"
+        android:visibility="gone" />
+    <!-- android:background="@drawable/top_button_right_selector" -->
+
+
+    <!-- android:layout_height="30.0dip" -->
+
+    <ImageView
+        android:id="@+id/TOP_RIGHT_IMAGEVIEW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dip"
+        android:adjustViewBounds="true"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:maxWidth="100.0dip"
+        android:scaleType="centerInside"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/TOP_RIGHT_BUTTON"
+        android:layout_width="wrap_content"
+        android:layout_height="30.0dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dip"
+        android:background="@android:color/transparent"
+        android:contentDescription="@null"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:maxWidth="100.0dip"
+        android:minWidth="52.0dip"
+        android:scaleType="centerInside"
+        android:textColor="#fff"
+        android:textSize="16dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

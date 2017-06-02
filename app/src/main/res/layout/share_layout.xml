@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#FFF"
+    android:id="@+id/share_layout"
+    android:layout_marginTop="10dp"
+    android:layout_height="133dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="28dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:layout_gravity="center_vertical"
+            android:text="邀请的收益"
+            android:textSize="14sp"
+            android:paddingLeft="0dp"
+            android:drawableLeft="@mipmap/left_green_line"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_height="84dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F4F5F9"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/bg_share"
+                ></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:text="邀请赚收益"
+                android:id="@+id/tv_title"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="11dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/tv_title"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:text="0"
+                android:id="@+id/tv_invitationCode"
+                android:drawablePadding="10dp"
+                android:textColor="#FF9900"
+                android:drawableRight="@mipmap/shape_scafe"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="￥0"
+                android:id="@+id/tv_paramValue"
+                android:gravity="center|bottom"
+                android:textSize="39sp"
+                android:textColor="#3BCF67"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="31dp"
+                android:layout_marginEnd="31dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="77dp"
+                android:text="元"
+                android:textSize="12sp"
+                android:textColor="#3BCF67"
+                android:id="@+id/textView4"
+                android:layout_marginRight="15dp"
+                android:layout_alignBaseline="@+id/tv_paramValue"
+                android:layout_alignBottom="@+id/tv_paramValue"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></LinearLayout>
+</LinearLayout>

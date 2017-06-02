@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.firstaid.view.TitleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_view"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout android:id="@+id/kan_zuji"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:onClick="onClick"
+
+                >
+                <ImageView android:id="@+id/right_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/my_icon_right"
+                    />
+                <TextView
+                    android:id="@+id/tv_kanzuji"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/right_icon"
+                    android:text="哪些人能看我足迹"
+                    />
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/guanxiren"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:onClick="onClick"
+                >
+                <ImageView android:id="@id/right_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/my_icon_right"
+                    />
+                <TextView
+                    android:id="@+id/tv_guanxiren"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/right_icon"
+                    android:text="管理关系人"
+                    />
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/be_relation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:onClick="onClick"
+                >
+                <ImageView android:id="@id/right_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/my_icon_right"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/right_icon"
+                    android:text="@string/berelation_list_title"
+                    />
+            </RelativeLayout>
+
+
+            <RelativeLayout android:id="@+id/dianliang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:onClick="onClick"
+                >
+                <ImageView android:id="@id/right_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/my_icon_right"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/right_icon"
+                    android:text="手机电量低告警"
+                    />
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/weilan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:onClick="onClick"
+                >
+                <ImageView android:id="@id/right_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/my_icon_right"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/right_icon"
+                    android:text="@string/map_weilan_title"
+                    />
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/baojing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:onClick="onClick"
+                >
+                <ImageView android:id="@id/right_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/my_icon_right"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/right_icon"
+                    android:text="@string/baojing_shunxu_title"
+                    />
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/shangchuanzuji"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:onClick="onClick"
+                >
+                <ImageView android:id="@id/right_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/my_icon_right"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/right_icon"
+                    android:text="我的电子病历"
+                    />
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/shiduan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:onClick="onClick"
+                android:visibility="gone"
+                >
+                <ImageView android:id="@id/right_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/my_icon_right"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/right_icon"
+                    android:text="录音报警前后时间段"
+                    />
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/change_phone_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:onClick="onClick"
+                >
+                <ImageView android:id="@id/right_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/my_icon_right"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/right_icon"
+                    android:text="变更手机号"
+                    />
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/open_device"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:onClick="onClick"
+                >
+                <ImageView android:id="@id/right_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/my_icon_right"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/right_icon"
+                    android:text="开通设备"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout android:id="@+id/insert_addr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:visibility="gone"
+                >
+                <ImageView android:id="@+id/left_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    />
+                <ImageView android:id="@id/right_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/right_icon"
+                    android:layout_toRightOf="@id/left_icon"
+                    android:text="添加地址"
+                    />
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/manage_addr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:visibility="gone"
+                >
+                <ImageView android:id="@id/left_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    />
+                <ImageView android:id="@id/right_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/right_icon"
+                    android:layout_toRightOf="@id/left_icon"
+                    android:text="@string/address_list_title"
+                    />
+            </RelativeLayout>
+            <!--<RelativeLayout android:id="@+id/open_device_list"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:padding="10dip"-->
+                <!--android:visibility="gone"-->
+                <!-->-->
+                <!--<ImageView android:id="@id/left_icon"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--/>-->
+                <!--<ImageView android:id="@id/right_icon"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--/>-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_toLeftOf="@id/right_icon"-->
+                    <!--android:layout_toRightOf="@id/left_icon"-->
+                    <!--android:text="@string/open_device_list_title"-->
+                    <!--/>-->
+            <!--</RelativeLayout>-->
+            <RelativeLayout android:id="@+id/help_record_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:visibility="gone"
+                >
+                <ImageView android:id="@id/left_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    />
+                <ImageView android:id="@id/right_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/right_icon"
+                    android:layout_toRightOf="@id/left_icon"
+                    android:text="@string/help_record_list_title"
+                    />
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/xianjin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:visibility="gone"
+                >
+                <ImageView android:id="@id/left_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    />
+                <ImageView android:id="@id/right_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/right_icon"
+                    android:layout_toRightOf="@id/left_icon"
+                    android:text="@string/xianjin_title"
+                    />
+            </RelativeLayout>
+            <!--<RelativeLayout android:id="@+id/tixian"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:padding="10dip"-->
+                <!--android:visibility="gone"-->
+                <!-->-->
+                <!--<ImageView android:id="@id/left_icon"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--/>-->
+                <!--<ImageView android:id="@id/right_icon"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--/>-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_toLeftOf="@id/right_icon"-->
+                    <!--android:layout_toRightOf="@id/left_icon"-->
+                    <!--android:text="@string/tixian_title"-->
+                    <!--/>-->
+            <!--</RelativeLayout>-->
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

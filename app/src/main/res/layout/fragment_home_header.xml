@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="12dip"
+    android:paddingBottom="12dip"
+    android:background="#fff"
+    >
+
+    <TextView android:id="@+id/qingshu_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/left_green_line"
+        android:textColor="#666"
+        android:textSize="16sp"
+
+        />
+<!--    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout android:id="@+id/qinshu_liear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            />
+    </ScrollView>-->
+
+
+</RelativeLayout>

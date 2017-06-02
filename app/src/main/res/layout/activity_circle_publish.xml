@@ -1,0 +1,134 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <com.firstaid.uploadMedicalRecords.OverScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:id="@+id/rl_contentType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_height="0px"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true" >
+
+                    <requestFocus />
+                </LinearLayout>
+
+                <com.firstaid.uploadMedicalRecords.ScrollGridView
+                    android:id="@+id/noScrollgridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="5dp"
+                    android:numColumns="4"
+                    android:padding="10dp"
+                    android:verticalSpacing="5dp" >
+                </com.firstaid.uploadMedicalRecords.ScrollGridView>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/functionsetting_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_contentType"
+                android:layout_marginTop="10dp"
+                android:background="#fff"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_wsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="20dp" >
+
+                    <TextView
+                        android:id="@+id/write_someTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:drawableLeft="@drawable/circle_writer_selecotr"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:text="为了快速诊断，请写些概述吧"
+                        android:textColor="@drawable/circle_writecolor_selector" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#00ff00" />
+
+                <com.firstaid.uploadMedicalRecords.CustomEditText
+                    android:id="@+id/publish_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="@drawable/edit_square_shape"
+                    android:gravity="top"
+                    android:hint="请输入内容"
+                    android:inputType="textMultiLine"
+                    android:maxLength="2000"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:singleLine="false"
+                    android:textColorHint="@color/divider"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/divider" />
+
+                <LinearLayout
+                    android:id="@+id/lin_emoticon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+             
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/divider" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="60dp"
+                android:drawableLeft="@drawable/icon_share2wxc"
+                android:gravity="center"
+                android:text="分享"
+                android:textColor="@color/title_bg_color"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </com.firstaid.uploadMedicalRecords.OverScrollView>
+
+
+    <include
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        layout="@layout/layout_global_top_header_left" />
+
+</RelativeLayout>

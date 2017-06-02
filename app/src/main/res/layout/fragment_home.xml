@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F4F5F9">
+
+    <com.firstaid.view.TitleView
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView android:layout_below="@id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:scrollbarFadeDuration="0"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <RelativeLayout android:id="@+id/top_panel"
+                android:layout_width="match_parent"
+                android:layout_height="184dp"
+                android:background="@color/title_bg_color"
+
+                android:layout_marginBottom="15dip"
+                >
+
+                <LinearLayout
+                    android:id="@+id/ll_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="5dip"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tv_shebei"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="智能设备状态"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/text_small" />
+
+                        <ImageView
+                            android:id="@+id/iv_shebei_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="2dp"
+                            android:src="@mipmap/shebei"
+                            android:layout_below="@id/tv_shebei"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_shebei_state"
+                            android:layout_below="@id/iv_shebei_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="未知"
+                            android:textColor="#3BCF67"
+                            android:textSize="@dimen/text_small"
+                            android:background="@mipmap/background_zhuangtai"
+                            android:gravity="center"
+                            android:layout_marginTop="7dip"
+                            />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tv_car120"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="120智能平台"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/text_small" />
+
+                        <ImageView
+                            android:id="@+id/iv_car120_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_car120"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="2dp"
+                            android:src="@mipmap/car120" />
+                        <TextView android:id="@+id/tv_120_state"
+                            android:layout_below="@id/iv_car120_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="未知"
+                            android:textColor="@color/home_state_red"
+                            android:textSize="@dimen/text_small"
+                            android:gravity="center"
+                            android:layout_centerHorizontal="true"
+                            android:background="@mipmap/background_zhuangtai2"
+                            android:layout_marginTop="7dp"
+                            />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tv_gps"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="GPS信号"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/text_small" />
+
+                        <ImageView
+                            android:id="@+id/iv_gps_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_gps"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="2dp"
+                            android:src="@mipmap/gps" />
+
+                        <TextView android:id="@+id/tv_gps_state"
+                            android:layout_below="@+id/iv_gps_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="信号弱"
+                            android:textColor="#D73F3F"
+                            android:textSize="@dimen/text_small"
+                            android:background="@mipmap/background_zhuangtai2"
+                            android:gravity="center"
+                            android:layout_marginTop="7dip"
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tv_network"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="网络状况"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/text_small" />
+
+                        <ImageView
+                            android:id="@+id/iv_network_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_network"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="2dp"
+                            android:src="@mipmap/network" />
+                        <TextView android:id="@+id/tv_network_state"
+                            android:layout_below="@id/iv_network_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="正常"
+                            android:textColor="#3BCF67"
+                            android:textSize="@dimen/text_small"
+                            android:background="@mipmap/background_zhuangtai"
+                            android:gravity="center"
+                            android:layout_marginTop="7dip"
+                            />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/ll_state"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="29dp"
+                    android:background="#F4F5F9" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/title_bg_color"
+                    android:layout_below="@id/tv_line">
+
+                    <RelativeLayout android:id="@+id/dianliang_root"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/iv_dian"
+                            android:layout_width="25dp"
+                            android:layout_height="15dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:src="@mipmap/dian" />
+
+                        <TextView android:id="@+id/tv_battery_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/iv_dian"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/text_middle" />
+
+                        <TextView
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@mipmap/shuhui" />
+                    </RelativeLayout>
+
+                    <RelativeLayout android:id="@+id/credit_root"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/iv_credit"
+                            android:layout_width="25dp"
+                            android:layout_height="18dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:src="@mipmap/xunzhang" />
+
+                        <TextView android:id="@+id/tv_credit_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/iv_credit"
+                            android:text="信用等级:未知"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/text_middle" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <include layout="@layout/home_mykinsfolk" />
+            <include layout = "@layout/share_layout"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:background="#ffffff"
+                android:layout_marginTop="15dip"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="相关资讯"
+                    android:textSize="14sp"
+                    android:drawableLeft="@mipmap/left_green_line"
+                    />
+
+                <TextView android:id="@+id/news_retry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/load_retry"
+                    android:textSize="14sp"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="5dip"
+                    android:visibility="gone"
+                    />
+                <TextView android:id="@+id/news_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="更多..."
+                    android:textSize="14sp"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="10dip"
+                    android:visibility="gone"
+                    />
+                <ProgressBar android:id="@+id/news_loading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dip"
+                    android:visibility="gone"
+                    android:layout_alignParentRight="true"
+                    style="?android:attr/progressBarStyleSmallTitle"
+                    />
+            </RelativeLayout>
+            <com.firstaid.view.HomeNewsListView
+                android:id="@+id/home_news_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+   </ScrollView>
+
+
+
+
+</RelativeLayout>

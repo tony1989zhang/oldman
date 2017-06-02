@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/map_hospital_detail_bg"
+    android:paddingBottom="15dip"
+    android:layout_marginLeft="5dip"
+   >
+    <RelativeLayout android:id="@+id/news_detail_lay1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/item_icon"
+            android:layout_width="@dimen/map_hospital_detail_img_size"
+            android:layout_height="@dimen/map_hospital_detail_img_size"
+            android:layout_margin="5dp"
+            />
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textSize="16sp"
+            android:layout_toRightOf="@id/item_icon"
+            android:textColor="#333"
+            android:maxLines="2"
+            android:layout_marginTop="5dp"
+            />
+        <TextView android:id="@+id/item_addr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/item_icon"
+            android:textColor="#999"
+            android:layout_below="@id/item_name"
+            android:maxLines="3"
+            />
+        <TextView android:id="@+id/item_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/item_icon"
+            android:textColor="#999"
+            android:layout_below="@id/item_addr"
+            android:maxLines="2"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout android:id="@+id/btn_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="220dip"
+        android:background="#FF9900"
+        android:layout_below="@id/news_detail_lay1"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_phone"
+                android:layout_gravity="center|left"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dip"
+                android:text="电话呼叫"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:drawablePadding="5dip"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

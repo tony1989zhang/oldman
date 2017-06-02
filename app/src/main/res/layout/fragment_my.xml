@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_divider_larght"
+    android:orientation="vertical">
+
+    <com.firstaid.view.TitleView
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/title_bg_color"
+                android:orientation="vertical"
+                android:padding="10dip">
+
+                <com.firstaid.view.CircleNetworkImageView
+                    android:id="@+id/item_icon"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/my_tou"
+                    app:civ_border_width="0dp" />
+
+                <TextView
+                    android:id="@+id/item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/retry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="5dip"
+                    android:text="重试"
+                    android:textColor="#fff"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/invite_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/invite_code_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#ffffff"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/invite_code_share"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dip"
+                            android:background="#fff"
+                            android:paddingBottom="6dip"
+                            android:paddingLeft="15dip"
+                            android:paddingRight="15dip"
+                            android:paddingTop="6dip"
+                            android:text="分享"
+                            android:textColor="@color/title_bg_color"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/invite_retry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:padding="5dip"
+                        android:text="重试"
+                        android:textColor="#fff"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/my_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/umeng_fb_white"
+                android:padding="10dip">
+
+                <ImageView
+                    android:id="@+id/left_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dip"
+                    android:src="@mipmap/icon_my_msg" />
+
+                <ImageView
+                    android:id="@+id/right_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/my_icon_right" />
+
+                <TextView
+                    android:id="@+id/my_msg_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dip"
+                    android:layout_toLeftOf="@id/right_icon"
+                    android:background="@mipmap/icon_tv_bg"
+                    android:gravity="center"
+                    android:textColor="@color/umeng_fb_white"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/right_icon"
+                    android:layout_toRightOf="@id/left_icon"
+                    android:text="@string/message_center_title"
+
+                    />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/default_divider_larght"></View>
+
+            <RelativeLayout
+                android:id="@+id/my_pengy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/umeng_fb_white"
+                android:padding="10dip">
+
+                <ImageView
+                    android:id="@id/left_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dip"
+                    android:src="@mipmap/icon_my_pengy" />
+
+                <ImageView
+                    android:id="@id/right_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/my_icon_right" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/right_icon"
+                    android:layout_toRightOf="@id/left_icon"
+                    android:text="和朋友圈交流" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/default_divider_larght"></View>
+
+            <RelativeLayout
+                android:id="@+id/my_jijiushouche"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/umeng_fb_white"
+                android:padding="10dip">
+
+                <ImageView
+                    android:id="@id/left_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dip"
+                    android:src="@mipmap/icon_my_jijiushouche" />
+
+                <ImageView
+                    android:id="@id/right_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/my_icon_right" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/right_icon"
+                    android:layout_toRightOf="@id/left_icon"
+                    android:text="@string/reserve_plan_title" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/default_divider_larght"></View>
+
+            <RelativeLayout
+                android:id="@+id/my_wuliu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/umeng_fb_white"
+                android:padding="10dip"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@id/left_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dip"
+                    android:src="@mipmap/icon_help" />
+
+                <ImageView
+                    android:id="@id/right_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/my_icon_right" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/right_icon"
+                    android:layout_toRightOf="@id/left_icon"
+                    android:text="我的物流" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/xianjin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/umeng_fb_white"
+                android:padding="10dip">
+
+                <ImageView
+                    android:id="@id/left_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dp"
+                    android:src="@mipmap/icon_help" />
+
+                <ImageView
+                    android:id="@id/right_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/my_icon_right" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/right_icon"
+                    android:layout_toRightOf="@id/left_icon"
+                    android:text="@string/xianjin_title" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/default_divider_larght"></View>
+
+            <RelativeLayout
+                android:id="@+id/my_help"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/umeng_fb_white"
+                android:padding="10dip">
+
+                <ImageView
+                    android:id="@id/left_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dip"
+                    android:src="@mipmap/icon_help" />
+
+                <ImageView
+                    android:id="@id/right_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/my_icon_right" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/right_icon"
+                    android:layout_toRightOf="@id/left_icon"
+                    android:text="@string/help_center" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/default_divider_larght"></View>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/default_divider_larght" />
+
+            <RelativeLayout
+                android:id="@+id/my_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/umeng_fb_white"
+                android:padding="10dip">
+
+                <ImageView
+                    android:id="@id/left_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dip"
+                    android:src="@mipmap/icon_my_update" />
+
+                <ImageView
+                    android:id="@id/right_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/my_icon_right" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/right_icon"
+                    android:layout_toRightOf="@id/left_icon"
+                    android:text="检测升级到" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/default_divider_larght"></View>
+
+            <RelativeLayout
+                android:id="@+id/my_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/umeng_fb_white"
+                android:padding="10dip">
+
+                <ImageView
+                    android:id="@id/left_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dip"
+                    android:src="@mipmap/icon_my_about" />
+
+                <ImageView
+                    android:id="@id/right_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/my_icon_right" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/right_icon"
+                    android:layout_toRightOf="@id/left_icon"
+                    android:text="关于我们" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/default_divider_larght"></View>
+
+            <RelativeLayout
+                android:id="@+id/my_pingjia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/umeng_fb_white"
+                android:padding="10dip">
+
+                <ImageView
+                    android:id="@id/left_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dip"
+                    android:src="@mipmap/icon_pinjia" />
+
+                <ImageView
+                    android:id="@id/right_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/my_icon_right" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/right_icon"
+                    android:layout_toRightOf="@id/left_icon"
+                    android:text="给个好评吧" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/default_divider_larght"></View>
+
+            <RelativeLayout
+                android:id="@+id/my_fankui"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/umeng_fb_white"
+                android:padding="10dip">
+
+                <ImageView
+                    android:id="@id/left_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dip"
+                    android:src="@mipmap/my_fankui" />
+
+                <ImageView
+                    android:id="@id/right_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/my_icon_right" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/right_icon"
+                    android:layout_toRightOf="@id/left_icon"
+                    android:text="意见反馈" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="@color/default_divider_larght"></View>
+
+            <RelativeLayout
+                android:id="@+id/my_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/umeng_fb_white"
+                android:padding="10dip">
+
+            <ImageView
+                android:id="@id/left_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dip"
+                android:src="@mipmap/myset" />
+
+            <ImageView
+                android:id="@id/right_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/my_icon_right" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/right_icon"
+                android:layout_toRightOf="@id/left_icon"
+                android:text="设置" />
+            </RelativeLayout>
+            <!--<RelativeLayout android:id="@+id/insert_addr"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="10dip"-->
+            <!--android:visibility="gone"-->
+            <!-->-->
+            <!--<ImageView android:id="@id/left_icon"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--/>-->
+            <!--<ImageView android:id="@id/right_icon"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--/>-->
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_toLeftOf="@id/right_icon"-->
+            <!--android:layout_toRightOf="@id/left_icon"-->
+            <!--android:text="添加地址"-->
+            <!--/>-->
+            <!--</RelativeLayout>-->
+            <!--<RelativeLayout android:id="@+id/manage_addr"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="10dip"-->
+            <!--android:visibility="gone"-->
+            <!-->-->
+            <!--<ImageView android:id="@id/left_icon"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--/>-->
+            <!--<ImageView android:id="@id/right_icon"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--/>-->
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_toLeftOf="@id/right_icon"-->
+            <!--android:layout_toRightOf="@id/left_icon"-->
+            <!--android:text="@string/address_list_title"-->
+            <!--/>-->
+            <!--</RelativeLayout>-->
+            <!--<RelativeLayout android:id="@+id/open_device_list"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="10dip"-->
+            <!--android:visibility="gone"-->
+            <!-->-->
+            <!--<ImageView android:id="@id/left_icon"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--/>-->
+            <!--<ImageView android:id="@id/right_icon"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--/>-->
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_toLeftOf="@id/right_icon"-->
+            <!--android:layout_toRightOf="@id/left_icon"-->
+            <!--android:text="@string/open_device_list_title"-->
+            <!--/>-->
+            <!--</RelativeLayout>-->
+            <!--<RelativeLayout android:id="@+id/help_record_list"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="10dip"-->
+            <!--android:visibility="gone"-->
+            <!-->-->
+            <!--<ImageView android:id="@id/left_icon"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--/>-->
+            <!--<ImageView android:id="@id/right_icon"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--/>-->
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_toLeftOf="@id/right_icon"-->
+            <!--android:layout_toRightOf="@id/left_icon"-->
+            <!--android:text="@string/help_record_list_title"-->
+            <!--/>-->
+            <!--</RelativeLayout>-->
+            <!--<RelativeLayout android:id="@+id/xianjin"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="10dip"-->
+            <!--android:visibility="gone"-->
+            <!-->-->
+            <!--<ImageView android:id="@id/left_icon"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--/>-->
+            <!--<ImageView android:id="@id/right_icon"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--/>-->
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_toLeftOf="@id/right_icon"-->
+            <!--android:layout_toRightOf="@id/left_icon"-->
+            <!--android:text="@string/xianjin_title"-->
+            <!--/>-->
+            <!--</RelativeLayout>-->
+            <!--<RelativeLayout android:id="@+id/tixian"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="10dip"-->
+            <!--android:visibility="gone"-->
+            <!-->-->
+            <!--<ImageView android:id="@id/left_icon"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--/>-->
+            <!--<ImageView android:id="@id/right_icon"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--/>-->
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_toLeftOf="@id/right_icon"-->
+            <!--android:layout_toRightOf="@id/left_icon"-->
+            <!--android:text="@string/tixian_title"-->
+            <!--/>-->
+            <!--</RelativeLayout>-->
+
+            <TextView
+                android:id="@+id/my_delete_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:layout_marginTop="5dip"
+                android:background="#fff"
+                android:gravity="center"
+                android:minHeight="50dip"
+                android:text="删除账户"
+                android:textColor="#FF4D4D"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/add_relation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@id/left_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@id/right_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/right_icon"
+            android:layout_toRightOf="@id/left_icon"
+            android:text="添加关系人" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/change_phone_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@id/left_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@id/right_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/right_icon"
+            android:layout_toRightOf="@id/left_icon"
+            android:text="更换手机号" />
+    </RelativeLayout>
+
+
+</LinearLayout>

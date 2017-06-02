@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="5"
+        android:layout_marginRight="5dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="3.5"
+            >
+
+            <TextView android:id="@+id/qinshu_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/home_relative_title_empry"
+                android:textSize="14sp"
+                android:drawableLeft="@mipmap/left_green_line"
+                />
+
+            <TextView android:id="@+id/qinshu_retry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/load_retry"
+                android:textSize="14sp"
+                android:layout_alignParentRight="true"
+                android:paddingRight="5dip"
+                android:visibility="gone"
+                />
+            <ProgressBar android:id="@+id/qinshu_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dip"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"
+                style="?android:attr/progressBarStyleSmallTitle"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/baojing_staus"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="报警后状态"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:background="@color/title_bg_color"
+            android:textColor="@color/umeng_fb_white"
+            />
+    </LinearLayout>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_daughter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_daughter"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:src="@mipmap/daughter" />
+
+            <TextView
+                android:id="@+id/tv_daughter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:text="女儿"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_son"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_son"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:src="@mipmap/son" />
+
+            <TextView
+                android:id="@+id/tv_son"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:text="儿子"
+                android:textColor="#3BCF67"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_erxi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_erxi"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:src="@mipmap/erxi" />
+
+            <TextView
+                android:id="@+id/tv_erxi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:text="儿媳"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+-->
+    <LinearLayout android:id="@+id/qinshu_vp_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <com.firstaid.view.SmartIndicator
+            android:id="@+id/qinshu_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/bolang" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/mykinsfolk_vp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:flipInterval="30"
+            android:persistentDrawingCache="animation"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_jijiuche_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="#ff7043"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:text="@string/before_alram"
+        android:visibility="gone"
+        />
+</LinearLayout>

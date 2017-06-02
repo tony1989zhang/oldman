@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="100dp">
+
+    <ImageView
+        android:id="@+id/goods_item_thumb_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="8dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name"/>
+
+    <TextView
+        android:id="@+id/goods_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/goods_item_thumb_img"
+        android:layout_toRightOf="@+id/goods_item_thumb_img"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:maxLines="2"
+        android:padding="8dp"
+        android:textColor="@android:color/tertiary_text_dark"
+        android:textSize="16sp"
+        tools:text="这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试"/>
+
+    <TextView
+        android:id="@+id/goods_item_now_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/goods_item_thumb_img"
+        android:layout_toEndOf="@+id/goods_item_thumb_img"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:padding="8dp"
+        android:singleLine="true"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="18sp"
+        tools:text="0.000元"/>
+
+
+    <TextView
+        android:id="@+id/goods_item_origin_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/goods_item_title"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/goods_item_title"
+        android:layout_toEndOf="@+id/goods_item_now_price"
+        android:layout_toRightOf="@+id/goods_item_now_price"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:padding="8dp"
+        android:singleLine="true"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="18sp"
+        tools:text="0.000元"/>
+
+</RelativeLayout>

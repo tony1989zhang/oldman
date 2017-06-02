@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.firstaid.oldman.QMRActivity">
+    <com.firstaid.view.TitleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_view"
+        />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/image_view_pager"
+        android:layout_below="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="120dp"
+        />
+
+    <com.firstaid.view.InkPageIndicator
+        android:id="@+id/ink_pager_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="140dp"
+   />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="tv_connection"
+        android:id="@+id/tv_connection"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_alignTop="@+id/ink_pager_indicator" />
+
+
+    <!--<FrameLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="?attr/actionBarSize">-->
+
+        <!--<android.support.v4.view.ViewPager-->
+            <!--android:id="@+id/image_view_pager"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"/>-->
+
+        <!--<com.firstaid.view.InkPageIndicator-->
+            <!--android:id="@+id/ink_pager_indicator"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="120dp"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:background="#6a6aff"-->
+            <!--android:layout_margin="16dp"/>-->
+
+    <!--</FrameLayout>-->
+</RelativeLayout>

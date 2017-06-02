@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialogRoot"
+    android:layout_width="300dip"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/common_alert_bg" >
+
+    <TextView
+        android:id="@+id/dialogText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialogTitle"
+        android:layout_marginBottom="10.0dip"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:layout_marginTop="10.0dip"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/dialog_input2"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_below="@+id/dialogTitle"
+        android:layout_marginBottom="10.0dip"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:layout_marginTop="10.0dip"
+        android:inputType=""
+        android:ems="10"
+        android:textColor="@color/red"
+        android:visibility="gone" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/dialogText"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@id/dialogText"
+        android:layout_marginTop="15.0dip"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/dialog_linear"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialogText"
+        android:layout_marginBottom="5.0dip"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:layout_marginTop="5.0dip"
+        >
+
+        <EditText
+            android:id="@+id/dialogEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:hint="提现金额(单位：元)"
+            android:textColorHint="@color/title_bg_color"
+            android:textSize="18sp"
+            android:textColor="@color/red"
+            >
+        </EditText>
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text="元"
+            android:textColor="@color/title_bg_color"
+            android:textSize="16sp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/textView" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/dialogDivider"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/dialog_linear"
+        android:background="@color/title_bg_color" />
+
+    <LinearLayout
+        android:id="@+id/btnLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialogDivider"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/etDialogLeftBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="46.0dip"
+            android:layout_weight="1.0"
+            android:background="@drawable/common_dialog_btn_left"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/cancel"
+            android:textColor="@color/title_bg_color"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="fill_parent"
+            android:background="@color/divider" />
+
+        <TextView
+            android:id="@+id/etDialogRightBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="46.0dip"
+            android:layout_weight="1.0"
+            android:background="@drawable/common_dialog_btn_right"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="取消"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/singleBtnLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialogDivider"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/singBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="46.0dip"
+            android:background="@drawable/common_dialog_btn_single"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/title_bg_color"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:padding="5dp"
+        android:src="@drawable/close_button_default"
+        android:visibility="gone" />
+
+</RelativeLayout>

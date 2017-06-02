@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dip"
+    android:id="@+id/item_root"
+    >
+    <ImageView android:id="@+id/item_right_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/you"
+        android:padding="5dip"
+        android:visibility="gone"
+        />
+    <TextView android:id="@+id/item_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#333"
+        android:textSize="16sp"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:layout_toLeftOf="@id/item_right_arrow"
+        />
+    <TextView android:id="@+id/item_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_title"
+        android:textColor="#333"
+        android:textSize="15sp"
+        android:maxLines="2"
+        android:ellipsize="marquee"
+        android:layout_toLeftOf="@id/item_right_arrow"
+        />
+    <TextView android:id="@+id/item_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_content"
+        android:textColor="#999"
+        android:layout_toLeftOf="@id/item_right_arrow"
+        />
+
+</RelativeLayout>

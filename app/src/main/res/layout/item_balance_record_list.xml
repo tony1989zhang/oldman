@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dip"
+    android:paddingRight="15dip"
+    android:paddingTop="15dip"
+    android:paddingBottom="15dip"
+    android:id="@+id/item_root"
+    >
+    <TextView android:id="@+id/item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#333"
+        android:textSize="16sp"
+        />
+    <TextView android:id="@+id/item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#999"
+        android:textSize="16sp"
+        android:layout_below="@id/item_name"
+        />
+    <TextView android:id="@+id/item_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ff9900"
+        android:layout_alignParentRight="true"
+        android:textSize="18sp"
+        android:layout_margin="5dip"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.firstaid.view.TitleView
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include layout="@layout/map_search_view"></include>
+
+    <RelativeLayout
+        android:id="@+id/map_top_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff">
+
+        <ImageView
+            android:id="@+id/map_top_bg_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@mipmap/map_top_bg_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dip"
+            >
+
+            <LinearLayout
+                android:id="@+id/map_top_jijiuche"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="5dip">
+
+                <ImageView
+                    android:id="@+id/map_top_jijiuche_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/map_top_not_selected" />
+
+                <TextView
+                    android:id="@+id/map_top_jijiuche_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip"
+                    android:text="急救车"
+                    android:textColor="#666" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/map_top_hospital"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="5dip">
+
+                <ImageView
+                    android:id="@+id/map_top_hospital_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/map_top_hospital" />
+
+                <TextView
+                    android:id="@+id/map_top_hospital_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip"
+                    android:text="医院"
+                    android:textColor="@color/title_bg_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/map_top_120"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="5dip">
+
+                <ImageView
+                    android:id="@+id/map_top_120_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/map_top_not_selected" />
+
+                <TextView
+                    android:id="@+id/map_top_120_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip"
+                    android:text="120中心"
+                    android:textColor="#666" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/near_top2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:padding="5dip"
+            android:visibility="gone"
+     >
+
+            <ImageView
+                android:id="@+id/icon_jijiuche"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_jijiuche" />
+
+            <ImageView
+                android:id="@+id/right_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dip"
+                android:src="@mipmap/you" />
+
+            <TextView
+                android:id="@+id/item_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:layout_toLeftOf="@id/right_icon"
+                android:textColor="#999" />
+
+            <TextView
+                android:id="@+id/item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:layout_toLeftOf="@id/item_time"
+                android:layout_toRightOf="@id/icon_jijiuche"
+                android:textColor="@color/title_bg_color"
+                android:text="厦门市第二医院"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/item_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_name"
+                android:layout_toRightOf="@id/icon_jijiuche"
+                android:text="车牌号：闽c 12323"
+                android:textColor="#999" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true" />
+
+        <Button
+            android:id="@+id/btn_call"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:background="#3BCF67"
+            android:text="一键呼叫"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/near_bottom_btn_root2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_on_car"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dip"
+                android:layout_weight="1"
+                android:background="@color/title_bg_color"
+                android:text="我已上车"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_not_on_car"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dip"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:text="未上车"
+                android:textColor="@color/title_bg_color"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btn_locate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btn_call"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="10dip"
+            android:src="@mipmap/icon_locate" />
+
+        <TextView
+            android:id="@+id/tv_routeParam"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/btn_locate"
+            android:layout_alignLeft="@+id/btn_call"
+            android:layout_alignStart="@+id/btn_call"
+            android:layout_marginRight="20dp"
+            android:background="#fff"
+            android:gravity="center"
+            android:textColor="@color/red" />
+    </RelativeLayout>
+
+</LinearLayout>
